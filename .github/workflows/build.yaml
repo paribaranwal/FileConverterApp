@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 16
+        uses: actions/setup-java@v2
+        with:
+          java-version: '16'
+
+      - name: Build with Maven
+        run: mvn clean package
+
+      - name: Upload JAR file
+        uses: actions/upload-artifact@v2
+        with:
+          name: FileConverter
+          path: target/FileConverter.jar
