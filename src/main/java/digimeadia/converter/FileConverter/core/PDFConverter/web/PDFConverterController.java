@@ -16,7 +16,8 @@ import java.io.IOException;
 @RequestMapping("/pdf")
 @CrossOrigin(origins = {
         "http://localhost:3001",
-        "http://192.168.1.37:3001"
+        "http://192.168.1.37:3001",
+        "https://online-file-converter.netlify.app"
 })
 public class PDFConverterController {
     private final PDFFileConverterService service;

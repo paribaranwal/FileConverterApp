@@ -22,6 +22,7 @@ public class Application {
                         .allowedOrigins("http://192.168.1.37:3001/")
                         .allowedOrigins("http://localhost:3001/")
                         .allowedOrigins("http://localhost:8084/")
+                        .allowedOrigins("https://online-file-converter.netlify.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("Content-Type, Authorization")
                         .allowedHeaders("*")
