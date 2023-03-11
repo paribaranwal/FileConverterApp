@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '16'
+          distribution: container
 
       - name: Build with Maven
         run: mvn clean package
@@ -25,3 +26,4 @@ jobs:
         with:
           name: FileConverter
           path: target/FileConverter.jar
+          distribution: container
