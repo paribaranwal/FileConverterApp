@@ -29,6 +29,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
+          distribution: container
           script: |
             cd /path/to/app
             sudo systemctl restart FileConverter.service
